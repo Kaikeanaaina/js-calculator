@@ -80,16 +80,25 @@ function calculatorModule(number){
    */
 
   calculator.saveMemory = function(){
-    total = memory;
+    memory = total;
   };
 
   /**
    * Clear the value stored at `memory`
    */
 
+   calculator.clearMemory = function(){
+    memory = 0;
+   };
   /**
    * Validation
    */
+
+   calculator.load(5);
+   calculator.add(4);
+   calculator.subtract(3);
+   calculator.multiply(2);
+   calculator.divide(1);
    return calculator;
 }
 
