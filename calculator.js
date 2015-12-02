@@ -90,15 +90,16 @@ function calculatorModule(number){
    calculator.clearMemory = function(){
     memory = 0;
    };
+
   /**
    * Validation
    */
 
    calculator.load(5);
-   calculator.add(4);
-   calculator.subtract(3);
-   calculator.multiply(2);
-   calculator.divide(1);
+   calculator.add(5);
+   calculator.subtract(5);
+   calculator.multiply(5);
+   calculator.divide(5);
    return calculator;
 }
 
