@@ -18,8 +18,13 @@ function calculatorModule(number){
    */
 
   calculator.load = function(number){
-    total = number;
-    return total;
+    if (typeof(number) !== 'number'){
+      throw new Error("Not a number!");
+    }
+    else {
+      total = number;
+      return total;
+    }
   };
 
   /**
@@ -36,7 +41,13 @@ function calculatorModule(number){
    * @param { Number } x
    */
   calculator.add = function(number){
-    total+=number;
+
+    if(typeof(number)!=="number"){
+      throw new Error("Not a number!");
+    }
+    else {
+      total+=number;
+    }
   };
 
   /**
@@ -45,7 +56,13 @@ function calculatorModule(number){
    */
 
   calculator.subtract = function(number){
-    total-=number;
+
+    if(typeof(number)!=="number"){
+      throw new Error("Not a number!");
+    }
+    else {
+      total-=number;
+    }
    };
 
   /**
@@ -54,7 +71,14 @@ function calculatorModule(number){
    */
 
   calculator.multiply = function(number){
-    total*=number;
+
+    if(typeof(number)!=="number"){
+      throw new Error("Not a number!");
+    }
+    else {
+      total*=number;
+    }
+
   };
 
   /**
@@ -63,7 +87,14 @@ function calculatorModule(number){
    */
 
    calculator.divide = function(number){
-    total/=number;
+
+    if(typeof(number)!=="number"){
+      throw new Error("Not a number!");
+    }
+    else {
+      total/=number;
+    }
+
    };
 
   /**
@@ -95,11 +126,7 @@ function calculatorModule(number){
    * Validation
    */
 
-   calculator.load(5);
-   calculator.add(5);
-   calculator.subtract(5);
-   calculator.multiply(5);
-   calculator.divide(5);
+
    return calculator;
 }
 
